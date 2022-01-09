@@ -1,0 +1,217 @@
+.form-error{
+    color: red;
+}
+/* Form page css start  */
+/* Ck Editor custom css added */
+
+.ck_editor{
+    width: 100%;
+}
+.ck_editor .ck-editor__main{
+    width: 100% !important;
+    height: 20rem !important;
+}
+
+.ck_editor .ck-editor__main .ck-content{
+    height: 100%;
+}
+
+.ck-blurred{
+    height: 100% !important;
+}
+
+.see_more_btn .d-flex{
+    height: 100%;
+    width: 100%; 
+}
+.btn-primary{
+    color: #ffffff !important;
+}
+
+.ck_editor_blog p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50ch;
+}
+
+
+
+.ck_editor_blog h2,
+.ck_editor_blog h3,
+.ck_editor_blog h4,
+.ck_editor_blog p,
+.ck_editor_blog .image,
+.ck_editor_blog ul,
+.ck_editor_blog ol,
+.ck_editor_blog li,
+.ck_editor_blog table,
+.ck_editor_blog blockquote{
+    display: none !important;
+}
+.ck_editor_blog p{
+    padding: 0 !important;
+    margin:  0 !important;
+}
+
+.ck_editor_details .image img{
+    width: 100%;
+    height: 100%;
+}
+
+.right_content img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Add blog page css start */
+.input_txt{
+    width: 60%;
+}
+.add_blog .form-group label,
+.ck_editor_section label{
+    font-size: 19px;
+}
+.form-check-label{
+    font-size: 16px !important;
+}
+.right_content .fa-eye{
+    font-size: 19px;
+}
+
+@media screen and (max-width: 1030px) {
+    .input_txt{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .input_txt{
+        width: 90%;
+    }
+    .add_blog .form-group label,
+    .ck_editor_section label{
+        font-size: 16px;
+    }
+    .form-check-label{
+        font-size: 14px !important;
+    }
+    .right_content .fa-eye{
+        font-size: 17px;
+    }
+
+}
+@media screen and (max-width: 575px) {
+    
+    .input_txt{
+        width: 100%;
+    }
+}
+figcaption{
+    text-align: center;
+}
+
+/* navbar  */
+.main-nav{
+    background: #009efb;
+    height: 60px;
+}
+.nav-bar{
+    height: 100%;
+}
+.nav-bar .right-nav a{
+    padding: 5px 10px;
+}
+.nav-bar a{
+    color: #eee !important;
+    font-size: 18px;
+    transition: .3s ease-in-out;
+}
+.nav-bar a:hover{
+    color: rgba(238, 238, 238, 0.836) !important;
+}
+
+.footer{
+    background: #009efb;
+}
+.footer p{
+    color: #eee;
+    padding: 10px;
+    margin-bottom: 0 !important;
+}
+/* home page  */
+.deployed-list{
+    position: relative;
+}
+.nav-prev-arrow{
+    position: absolute;
+    top: 41%;
+    right: -5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    outline: 0 !important;
+}
+.nav-next-arrow{
+    position: absolute;
+    top: 41%;
+    left: -5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    outline: 0 !important;
+}
+
+.nav-prev-arrow i,
+.nav-next-arrow i{
+    color: #777;
+    padding: 8px 12px!important;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    font-weight: 900;
+}
+
+.nav-prev-arrow:hover i,
+.nav-next-arrow:hover i{
+    box-shadow: none;
+}
+.cata-sub-nav{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+.single-card{
+    width: 190px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+}
+
+.single-card img{
+    width: 160px;
+    height: 180px;
+    object-fit: cover;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.single-card a{
+    border: 1px solid rgba(119, 119, 119, 0.37);
+    padding: 7px 20px;
+    cursor: pointer;
+}
+
+.single-card a:hover{
+    letter-spacing: 1px;
+}
