@@ -23,9 +23,14 @@ import ItemListPage from "../Items/ItemListPage";
 import ItemDeployedListPage from "../Items/ItemDeployedListPage";
 import ItemRequestedListPage from "../Items/ItemRequestedListPage";
 import ItemUpdatePage from "../Items/ItemUpdatePage";
+import AdminOrderProcessing from "../Items/AdminOrderProcessing";
+import OrderProcessing from "../Items/OrderProcessing";
+
 
 import HomePage from '../HomePage'
 import ItemList from '../user/ItemList'
+import OrderProcess from '../user/OrderProcess'
+import SafePaymeny from '../user/SafePayment'
 
 const cookies = new Cookies();
 
@@ -134,6 +139,51 @@ const Routes = () => {
         path="/item-list/"
         auth={Auth.auth}
         component={ItemList}
+      />
+      :null
+      }
+      {
+          get_cookies && get_cookies.userType === 2?
+          <ProtectedRoute
+        path="/order-process"
+        auth={Auth.auth}
+        component={OrderProcess}
+      />
+      :null
+      }
+      {
+          get_cookies && get_cookies.userType === 2?
+          <ProtectedRoute
+        path="/item-list/"
+        auth={Auth.auth}
+        component={ItemList}
+      />
+      :null
+      }
+      {
+          get_cookies && get_cookies.userType === 1?
+          <ProtectedRoute
+        path="/item/order-processing"
+        auth={Auth.auth}
+        component={OrderProcessing}
+      />
+      :null
+      }
+      {
+          get_cookies && get_cookies.userType === 1?
+          <ProtectedRoute
+        path="/admin/order-processing"
+        auth={Auth.auth}
+        component={AdminOrderProcessing}
+      />
+      :null
+      }
+      {
+          get_cookies && get_cookies.userType === 2?
+          <ProtectedRoute
+        path="/safe-payment/"
+        auth={Auth.auth}
+        component={SafePaymeny}
       />
       :null
       }

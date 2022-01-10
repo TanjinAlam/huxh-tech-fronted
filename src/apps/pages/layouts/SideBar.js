@@ -63,6 +63,7 @@ export default function SideBar() {
                                                 <li><NavLink to="/item/list">List</NavLink></li>
                                                 <li><NavLink to="/item/deployed-list">Deployed List</NavLink></li>
                                                 <li><NavLink to="/item/requested-list">Requested List</NavLink></li>
+                                                <li><NavLink to="/item/order-processing">Order Processing</NavLink></li>
                                             </ul>
                                         </li>
                                         {/* : null

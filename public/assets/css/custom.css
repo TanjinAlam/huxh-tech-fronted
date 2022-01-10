@@ -145,7 +145,7 @@ figcaption{
 }
 .nav-prev-arrow{
     position: absolute;
-    top: 41%;
+    top: 46%;
     right: -5px;
     border: none;
     background: none;
@@ -157,7 +157,7 @@ figcaption{
 }
 .nav-next-arrow{
     position: absolute;
-    top: 41%;
+    top: 46%;
     left: -5px;
     border: none;
     background: none;
@@ -191,7 +191,7 @@ figcaption{
     white-space: nowrap;
 }
 .single-card{
-    width: 190px;
+    width: 200px;
     margin: 10px;
     padding: 15px;
     border: 1px solid rgb(219, 219, 219);
@@ -199,7 +199,7 @@ figcaption{
 }
 
 .single-card img{
-    width: 160px;
+    width: 170px;
     height: 180px;
     object-fit: cover;
     border-top-right-radius: 5px;
@@ -211,7 +211,41 @@ figcaption{
     padding: 7px 20px;
     cursor: pointer;
 }
+.single-card button{
+    border: 1px solid rgba(119, 119, 119, 0.37);
+    padding: 6px 20px;
+    color: #009ce7;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+}
 
-.single-card a:hover{
+.single-card a:hover,
+.single-card button:hover{
     letter-spacing: 1px;
+}
+
+/* safe-payment page  */
+.safe-payment .left img{
+    width: 100%;
+}
+.safe-payment .left .txt-bg{
+    font-size: 20px;
+}
+.safe-payment .right p {
+    font-size: 18px;
+}
+.safe-payment .right p span{
+    border: 1px solid #ddd;
+    padding: 5px 20px;
+    margin-right: 10px;
+}
+.safe-payment .right button{
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+}
+.safe-payment .right  .form-group{
+    width: 60px;
+    margin-bottom: 0 !important;
 }

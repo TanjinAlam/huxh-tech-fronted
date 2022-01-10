@@ -44,7 +44,7 @@ export const initialValues = {
   }
   export const AcceptOrder = async (values) => {
     try {
-      return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/accpetOrder",values)
+      return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/accpetOrders",values)
       // pageLoader.loadingState(false)
     } catch (error) {
       return error

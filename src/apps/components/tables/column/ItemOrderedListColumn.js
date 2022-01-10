@@ -34,6 +34,12 @@ export const COLUMNS = [
         disableFilters: true,
     },
     {
+        Header: "productId",
+        Footer: "productId",
+        accessor: "productId",
+        disableFilters: true,
+    },
+    {
         Header: "Image",
         Footer: "Image",
         accessor: "img",

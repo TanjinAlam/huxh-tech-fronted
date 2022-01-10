@@ -111,8 +111,11 @@ export const DataTable = ({ COLUMNS, endpoint, query, status }) => {
                     "followUpDiscount",
                     "followUpDuration",
                     "doctor.id",
+
+                    
                     "contractAddress",
                     "walletAddress",
+                    "productId",
                 ]
             }
         },

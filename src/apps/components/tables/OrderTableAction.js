@@ -215,8 +215,9 @@ export const FormAction = ({ page, data, statusList, endpoint, flag }) => {
         const values = {
             contractAddress:data.row.values.contractAddress,
             privateKey:get_cookies.walletKey,
-            walletAddress:data.row.values.walletAddress,
-            productId:id
+            walletAddress:get_cookies.walletAddress,
+            productId:id,
+            buyerAddress:data.row.values.walletAddress
 
         }
         console.log("data",values)
@@ -227,7 +228,7 @@ export const FormAction = ({ page, data, statusList, endpoint, flag }) => {
             if (res.status == 200) {
                 pageLoader.loadingState(false)
                 notification('success', res.data.msg)
-                // window.location.reload(true)
+                window.location.reload(true)
             } else {
                 pageLoader.loadingState(false)
                 notification('fail', res.data.msg)
@@ -266,7 +267,7 @@ export const FormAction = ({ page, data, statusList, endpoint, flag }) => {
 
                     
 
-                    <button onClick={() => onClicked(data.row.values.id)} className="dropdown-item">
+                    <button onClick={() => onClicked(data.row.values.productId)} className="dropdown-item">
                         <i className="fa fa-pencil m-r-5"></i> Accept order
                     </button>
 

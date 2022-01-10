@@ -31,6 +31,38 @@ export const initialValues = {
       return error
     }
   }
+  export const ProcessingItemList = async (value) => {
+    try {
+      return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/acceptedOrder",{userId: value})
+      // pageLoader.loadingState(false)
+    } catch (error) {
+      return error
+    }
+  }
+  export const OrderProcessingItemList = async (value) => {
+    try {
+      return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/processingOrder")
+      // pageLoader.loadingState(false)
+    } catch (error) {
+      return error
+    }
+  }
+  export const sendOrder = async (values) => {
+    try {
+      return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/sendOrder",values)
+      // pageLoader.loadingState(false)
+    } catch (error) {
+      return error
+    }
+  }
+  export const safePayment = async (values) => {
+    try {
+      return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/sendOrder",values)
+      // pageLoader.loadingState(false)
+    } catch (error) {
+      return error
+    }
+  }
   export const onSubmiting = async (values) => {
     try {
       return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/orderRequest",values)
