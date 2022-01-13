@@ -71,7 +71,7 @@ function LoginPage() {
     console.log('rrrr',res.data)
       pageLoader.loadingState(false)
       if(res.data.status === 200){
-          notification('success', 'Login Successfully. Redirecting.. ')
+          notification('success', 'Registration Successfully. Redirecting.. ')
           console.log('Success status :: ', res)
           setTimeout(()=>{
               // admin data get successfully, redirect to admin dashboard

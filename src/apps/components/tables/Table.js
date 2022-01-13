@@ -116,6 +116,7 @@ export const DataTable = ({ COLUMNS, endpoint, query, status }) => {
                     "contractAddress",
                     "walletAddress",
                     "productId",
+                    "productOrderId",
                 ]
             }
         },

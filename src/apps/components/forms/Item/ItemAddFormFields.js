@@ -50,3 +50,11 @@ export const initialValues = {
       return error
     }
   }
+  export const acceptCourierRequest = async (values) => {
+    try {
+      return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/acceptCourierRequest",values)
+      // pageLoader.loadingState(false)
+    } catch (error) {
+      return error
+    }
+  }

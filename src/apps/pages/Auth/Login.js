@@ -99,6 +99,8 @@ function LoginPage() {
               window.location.href = '/item/list'
               if(res.data.data.userType == 2)
                 window.location.href = '/home'
+                if(res.data.data.userType == 3)
+                window.location.href = '/order/pending'
 
             }, 2000)
         }else{

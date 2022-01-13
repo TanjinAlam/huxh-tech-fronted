@@ -35,7 +35,8 @@ if(data.videoURL) values.videoURL = data.videoURL
           console.log(res.data.status)
         pageLoader.loadingState(false);
         if (res.data.status === 200) {
-          notification("success", "Successfully submited. Redirecting.. ");
+          notification("success", "Successfully submited.");
+          window.location.reload(true)
           
         } else {
           notification("fail", res.msg);

@@ -20,6 +20,7 @@ import SignUp from "../Auth/Registration";
 //Importing Admin Pages
 import ItemAddPage from "../Items/ItemAddPage";
 import ItemListPage from "../Items/ItemListPage";
+import AssignItemListPage from "../Items/AssignCourerItemListPage";
 import ItemDeployedListPage from "../Items/ItemDeployedListPage";
 import ItemRequestedListPage from "../Items/ItemRequestedListPage";
 import ItemUpdatePage from "../Items/ItemUpdatePage";
@@ -31,6 +32,12 @@ import HomePage from '../HomePage'
 import ItemList from '../user/ItemList'
 import OrderProcess from '../user/OrderProcess'
 import SafePaymeny from '../user/SafePayment'
+
+import CourerList from '../Courer/ItemListPage'
+import CourerOrderProcessingList from "../Courer/OrderProcessing";
+import CourerOrderProcessing from "../Courer/CourerOrderProcessing";
+
+
 
 const cookies = new Cookies();
 
@@ -67,14 +74,25 @@ function Index() {
               }}
             />
                     :
+                    get_cookies && get_cookies.userType === 1?
             <Route
               exact
               path="/"
               auth={auth}
               component={() => {
-                return auth ? <Redirect to="item/list" /> : <LoginPage />;
+                return auth ? <Redirect to="/item/list" /> : <LoginPage />;
               }}
             />
+            :
+            <Route
+              exact
+              path="/"
+              auth={auth}
+              component={() => {
+                return auth ? <Redirect to="/order/pending" /> : <LoginPage />;
+              }}
+            />
+
 }
 
             <Route>
@@ -205,6 +223,15 @@ const Routes = () => {
       />
       :
       null}
+      {
+          get_cookies && get_cookies.userType === 1?
+      <ProtectedRoute
+        path="/item/assign-courer"
+        auth={Auth.auth}
+        component={AssignItemListPage}
+      />
+      :
+      null}
       
       {
           get_cookies && get_cookies.userType === 1?
@@ -223,6 +250,33 @@ const Routes = () => {
         component={ItemRequestedListPage}
       />
       :null 
+      }
+      {
+          get_cookies && get_cookies.userType === 3?
+      <ProtectedRoute
+        path="/order/pending"
+        auth={Auth.auth}
+        component={CourerList}
+      />
+      :null 
+      }
+      {
+          get_cookies && get_cookies.userType === 3?
+          <ProtectedRoute
+        path="/courer/processing-list"
+        auth={Auth.auth}
+        component={CourerOrderProcessingList}
+      />
+      :null
+      }
+      {
+          get_cookies && get_cookies.userType === 3?
+          <ProtectedRoute
+        path="/courer/order-processing"
+        auth={Auth.auth}
+        component={CourerOrderProcessing}
+      />
+      :null
       }
       <ProtectedRoute
         path="/item/update"

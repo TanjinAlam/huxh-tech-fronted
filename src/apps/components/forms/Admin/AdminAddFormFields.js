@@ -50,6 +50,15 @@ export const setProductPrice = async (values) => {
     return error
   }
 }
+export const safePayment = async (values) => {
+  console.log("GGG",values)
+  try {
+    return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/safePayment",values)
+    // pageLoader.loadingState(false)
+  } catch (error) {
+    return error
+  }
+}
 
 /**
  * @name onSubmit
@@ -64,6 +73,35 @@ export const setShipmentPrice = async (values) => {
   console.log("ggg",values)
   try {
     return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/setShipmentPrice",values)
+    // pageLoader.loadingState(false)
+  } catch (error) {
+    return error
+  }
+}
+
+export const verifyPhotoSeller  = async (values) => {
+  console.log("ggg",values)
+  try {
+    return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/verifyPhotoSeller",values)
+    // pageLoader.loadingState(false)
+  } catch (error) {
+    return error
+  }
+}
+export const verifyPhotoCourer  = async (values) => {
+  console.log("ggg",values)
+  try {
+    return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/verifyPhotoCourier",values)
+    // pageLoader.loadingState(false)
+  } catch (error) {
+    return error
+  }
+}
+
+export const deliveryOrder  = async (values) => {
+  console.log("ggg",values)
+  try {
+    return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/deliveryOrder",values)
     // pageLoader.loadingState(false)
   } catch (error) {
     return error

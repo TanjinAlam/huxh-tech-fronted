@@ -47,8 +47,8 @@ export default function SideBar() {
                                         {/* : null
                                 } */}
 
-{/* {
-                                    admin && admin.doctor ? */}
+                                {
+                                    get_cookies && get_cookies.userType == 1 ?
                                         <li className="submenu">
                                             <a href="#" onClick={() => setClassNameFun("product")}>
                                                 <i className="fa fa-user-md"></i> <span> Product </span>
@@ -64,10 +64,32 @@ export default function SideBar() {
                                                 <li><NavLink to="/item/deployed-list">Deployed List</NavLink></li>
                                                 <li><NavLink to="/item/requested-list">Requested List</NavLink></li>
                                                 <li><NavLink to="/item/order-processing">Order Processing</NavLink></li>
+                                                <li><NavLink to="/item/assign-courer">Assign courer</NavLink></li>
                                             </ul>
                                         </li>
-                                        {/* : null
-                                } */}
+                                        : null
+                                } 
+                                {
+                                    get_cookies && get_cookies.userType == 3 ?
+                                        <li className="submenu">
+                                            <a href="#" onClick={() => setClassNameFun("product")}>
+                                                <i className="fa fa-user-md"></i> <span> Orders </span>
+                                                {
+                                                    classnm.doctor == "d-block" ?
+                                                        <span className="menu-arrow" id="menu-bottom-arrow"></span>
+                                                        : <span className="menu-arrow" id=""></span>
+                                                }
+                                            </a>
+                                            <ul className={cl.product}>
+                                                <li><NavLink to="/order/pending">Pending List</NavLink></li>
+                                                <li><NavLink to="/item/list">List</NavLink></li>
+                                                {/* <li><NavLink to="/item/deployed-list">Deployed List</NavLink></li>
+                                                <li><NavLink to="/item/requested-list">Requested List</NavLink></li> */}
+                                                <li><NavLink to="/courer/processing-list">Order Processing</NavLink></li>
+                                            </ul>
+                                        </li>
+                                        : null
+                                } 
 
 
 

@@ -226,8 +226,17 @@ figcaption{
 }
 
 /* safe-payment page  */
+.safe-payment .left .left-card{
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+}
 .safe-payment .left img{
-    width: 100%;
+    width: 95%;
+    margin: auto;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .safe-payment .left .txt-bg{
     font-size: 20px;
@@ -248,4 +257,10 @@ figcaption{
 .safe-payment .right  .form-group{
     width: 60px;
     margin-bottom: 0 !important;
+}
+.safe-payment .right .right-card{
+    width: 400px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
