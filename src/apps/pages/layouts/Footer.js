@@ -13,7 +13,7 @@ export default function SideBar() {
           <div className="container">
             <div className="row">
               <p className="w-100 text-center">                
-                @2021 website X. All rights reserved by website X
+                @2021 huxhtech.com. All rights reserved by huxhtech.com .
               </p>
             </div>
           </div>

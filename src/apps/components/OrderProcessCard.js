@@ -26,9 +26,17 @@ function AdminAddPage({ data }) {
       >
         <div className="single-card">
           <img src={data.img} alt="item" />
-          <p>Names: {data.name}</p>
+          <p>Name: {data.name}</p>
           <p>Price : {data.price}</p>
-          <div className="text-center"></div>
+          
+          <p>
+              Delivery status:
+              {data.deliveryDone == 0 ? (
+                <span className="text-warning"> incomplate</span>
+              ) : (
+                <span className="text-success"> complate</span>
+              )}
+            </p>
         </div>
       </NavLink>
       :
@@ -41,9 +49,15 @@ function AdminAddPage({ data }) {
       >
         <div className="single-card">
           <img src={data.img} alt="item" />
-          <p>Namess: {data.name}</p>
+          <p>Name: {data.name}</p>
           <p>Price : {data.price}</p>
-          <div className="text-center"></div>
+          
+          {
+            !data.deliveryDone?
+            <p className="text-warning">Order processing</p>
+            :
+            <p className="text-success">Order complate</p>
+          }
         </div>
       </NavLink>
       }

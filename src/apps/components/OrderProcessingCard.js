@@ -61,6 +61,14 @@ if(data.videoURL) values.videoURL = data.videoURL
           <img src={data.img} alt="item" />
           <p>Name: {data.name}</p>
           <p>Price : {data.price}</p>
+          <p>
+              Delivery status:
+              {data.deliveryDone == 0 ? (
+                <span className="text-warning"> incomplate</span>
+              ) : (
+                <span className="text-success"> complate</span>
+              )}
+            </p>
           <div className='text-center'>
             
           {

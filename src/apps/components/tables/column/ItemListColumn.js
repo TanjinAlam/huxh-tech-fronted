@@ -10,10 +10,10 @@ import { ColumnFilter } from '../ColumnFilter'
 
 export const COLUMNS = [
     {
-        Header: "Label",
-        Footer: "Label",
+        Header: "Name",
+        Footer: "Name",
         accessor: "name",
-        Filter: ColumnFilter,
+        disableFilters: true,
     },
     {
         Header: "Price",

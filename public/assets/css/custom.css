@@ -264,3 +264,7 @@ figcaption{
     border: 1px solid #ddd;
     border-radius: 10px;
 }
+.safe-payment .right .right-card p .text-warning,
+.safe-payment .right .right-card p .text-success{
+    border-radius: 5px;
+}

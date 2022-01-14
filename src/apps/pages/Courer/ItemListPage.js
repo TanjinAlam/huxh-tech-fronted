@@ -8,7 +8,7 @@ function AdminListPage() {
             <div className="content">
                 <div className="row">
                     <div className="col-sm-4 col-3">
-                        <h4 className="page-title">Pending Order List</h4>
+                        <h4 className="page-title">Pending Order</h4>
                     </div>
                 </div>
 

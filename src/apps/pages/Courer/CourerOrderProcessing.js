@@ -28,8 +28,6 @@ function AdminAddPage() {
     price: "",
   };
   useEffect(async () => {
-    unixDate();
-    console.log(getdate(1642010400));
     setVerify(location.state.photoVerifiedByCourier);
     console.log("location", location.state);
   }, []);
@@ -43,16 +41,6 @@ function AdminAddPage() {
     var month = date_variable.getMonth() + 1;
     var day = date_variable.getDate();
     return year + "-" + month + "-" + day;
-  }
-  function unixDate() {
-    var date_variable = new Date();
-    var year = date_variable.getFullYear();
-    var month = date_variable.getMonth() + 1;
-    var day = date_variable.getDate();
-    let date = year + "-" + month + "-" + day;
-
-    const UnixDate = new Date(date).getTime() / 1000;
-    console.log(UnixDate);
   }
 
   function PhotoVerifyFun() {
@@ -84,13 +72,15 @@ function AdminAddPage() {
   }
 
   function deliveryOrderFun() {
-    let values = {
+    let values = {      
       contractAddress: location.state.contractAddress,
-      invoiceNo: location.state.invoiceNo,
+      orderNo: location.state.orderNo,
       id: location.state.id,
-      orderNo:location.state.orderNo,
-      walletAddress: get_cookies.walletAddress,
-      privateKey: get_cookies.walletKey,
+      ownerAddress: get_cookies.walletAddress,
+      privateKey: location.state.sellerWalletKey,
+      walletAddress: location.state.sellerWalletAddress,
+      amount:location.state.shipmentPrice,
+
     };
     console.log("vvv", values);
 
@@ -119,7 +109,7 @@ function AdminAddPage() {
           <div className="col-md-6 left">
             <div className="left-card">
             <img src={location.state.img} alt="img" />
-            <p className="pt-3 txt-bg">Title: {location.state.name}</p>
+            <p className="pt-3 txt-bg">Name: {location.state.name}</p>
             <p>Prices: {location.state.price}</p>
             {location.state.deliveryDate ? (
               <p>Delivery Date: {getdate(location.state.deliveryDate)}</p>
@@ -127,9 +117,9 @@ function AdminAddPage() {
             <p>
               Delivery status:
               {location.state.deliveryDone == 0 ? (
-                <span> incomplate</span>
+                <span className="text-warning"> incomplate</span>
               ) : (
-                <span> complate</span>
+                <span className="text-success"> complate</span>
               )}
             </p>
             </div>
@@ -149,12 +139,12 @@ function AdminAddPage() {
             ) : null}
 
             {verify == 0 && location.state.invoiceNo ? (
-              <p>Photo varification by seller pending</p>
+              <p>Photo varification by seller <span className="text-warning">pending</span></p>
             ) : (
-              <p>Photo varification by seller done</p>
+              <p>Photo varification by seller <span className="text-success">done</span></p>
             )}
             {verify ? (
-              <p>Photo varification by courer done</p>
+              <p>Photo varification by courer <span className="text-success">done</span></p>
             ) : (
               <p>
                 Photo verify{" "}
@@ -163,9 +153,18 @@ function AdminAddPage() {
                 </button>
               </p>
             )}
+
+{location.state.photoVerifiedByUser ? (
+              <p>Photo varification by user <span className="text-success">done</span></p>
+            ) : (
+               <p>Photo varification by user <span className="text-warning">pending</span></p>
+            )}
+
             {location.state.invoiceNo &&
             verify &&
-            location.state.photoVerifiedBySeller ? (
+            location.state.photoVerifiedBySeller&&
+            location.state.photoVerifiedByUser&&
+            location.state.deliveryDone == 0 ? (
               <p>
                 Confirm delivary:{" "}
                 <button className="btn" onClick={deliveryOrderFun}>

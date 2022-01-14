@@ -35,7 +35,7 @@ function AdminAddPage() {
         <>
         <div className='container pt-5 pb-5'>
             <div className='row'>
-                <h1>Order Process item list</h1>
+                {/* <h1>Order Process item list</h1> */}
             </div>
 
             <div className='row'>

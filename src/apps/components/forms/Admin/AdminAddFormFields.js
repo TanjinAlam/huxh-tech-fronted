@@ -97,6 +97,15 @@ export const verifyPhotoCourer  = async (values) => {
     return error
   }
 }
+export const verifyPhotoUser  = async (values) => {
+  console.log("ggg",values)
+  try {
+    return await axios.post("https://backend.huxhtech.com/api/v1/huxh-deal/verifyPhotoUser",values)
+    // pageLoader.loadingState(false)
+  } catch (error) {
+    return error
+  }
+}
 
 export const deliveryOrder  = async (values) => {
   console.log("ggg",values)

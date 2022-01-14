@@ -22,8 +22,6 @@ export default function SideBar() {
           </div>
           <div className="right-nav">
             <NavLink to='/order-process'>Order processing</NavLink>
-            <NavLink to='/home'>About Us</NavLink>
-            <NavLink to='/home'>Contact</NavLink>
             <NavLink to='/' onClick={logOut}>Logout</NavLink>
 
           </div>

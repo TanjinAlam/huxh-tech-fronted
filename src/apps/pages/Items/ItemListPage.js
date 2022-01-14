@@ -8,10 +8,7 @@ function AdminListPage() {
             <div className="content">
                 <div className="row">
                     <div className="col-sm-4 col-3">
-                        <h4 className="page-title">Admin List</h4>
-                    </div>
-                    <div className="col-sm-8 col-9 text-right m-b-20">
-                        <a href="/item/add" className="btn btn-primary float-right btn-rounded"><i className="fa fa-plus"></i> Add Item </a>
+                        <h4 className="page-title">Item list</h4>
                     </div>
                 </div>
 

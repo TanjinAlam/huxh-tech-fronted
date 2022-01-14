@@ -142,9 +142,9 @@ function AdminAddPage() {
             <p>Delivery status: 
               {
                 location.state.deliveryDone == 0?
-                <span> incomplate</span>
+                <span className="text-warning"> incomplate</span>
                 :
-                <span> complate</span>
+                <span className="text-success"> complate</span>
               }
               </p>
               </div>
@@ -227,13 +227,13 @@ function AdminAddPage() {
             {
               verify === 0?
               <p>Photo verify <button onClick={PhotoVerifyFun} className="btn">Confirm</button></p>
-              :<p>Photo varification by seller done</p>
+              :<p>Photo varification by seller <span className="text-success">done</span></p>
             }
             {
               location.state.photoVerifiedByCourier?
-              <p>Photo varification by courer done</p>
+              <p>Photo varification by courer <span className="text-success">done</span></p>
               :
-              <p>Photo varification by courer pending</p>
+              <p>Photo varification by courer <span className="text-warning">pending</span></p>
             }
             </div>
           </div>

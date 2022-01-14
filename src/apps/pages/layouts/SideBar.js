@@ -39,7 +39,7 @@ export default function SideBar() {
                                 {/* {
                                     admin && admin.home ? */}
                                         <li className="active">
-                                            <NavLink to="/admin/home">
+                                            <NavLink to="#">
                                                 <i class="fa fa-dashboard" aria-hidden="true"></i>
                                                 <span>Dashboard</span>
                                             </NavLink>
@@ -64,7 +64,7 @@ export default function SideBar() {
                                                 <li><NavLink to="/item/deployed-list">Deployed List</NavLink></li>
                                                 <li><NavLink to="/item/requested-list">Requested List</NavLink></li>
                                                 <li><NavLink to="/item/order-processing">Order Processing</NavLink></li>
-                                                <li><NavLink to="/item/assign-courer">Assign courer</NavLink></li>
+                                                <li><NavLink to="/item/assign-courer">Assign Courier</NavLink></li>
                                             </ul>
                                         </li>
                                         : null
@@ -82,7 +82,7 @@ export default function SideBar() {
                                             </a>
                                             <ul className={cl.product}>
                                                 <li><NavLink to="/order/pending">Pending List</NavLink></li>
-                                                <li><NavLink to="/item/list">List</NavLink></li>
+                                                {/* <li><NavLink to="/item/list">List</NavLink></li> */}
                                                 {/* <li><NavLink to="/item/deployed-list">Deployed List</NavLink></li>
                                                 <li><NavLink to="/item/requested-list">Requested List</NavLink></li> */}
                                                 <li><NavLink to="/courer/processing-list">Order Processing</NavLink></li>

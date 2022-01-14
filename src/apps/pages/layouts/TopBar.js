@@ -38,9 +38,9 @@ function TopBar(){
                             
                         </a>
                         <div className="dropdown-menu">
-                            <a className="dropdown-item" href="profile.html">My Profile</a>
+                            {/* <a className="dropdown-item" href="profile.html">My Profile</a>
                             <a className="dropdown-item" href="edit-profile.html">Edit Profile</a>
-                            <a className="dropdown-item" href="settings.html">Settings</a>
+                            <a className="dropdown-item" href="settings.html">Settings</a> */}
                             <a className="dropdown-item" href="/" onClick={logOut}>Logout</a>
                         </div>
                     </li>
